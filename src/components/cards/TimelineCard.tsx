@@ -1,24 +1,24 @@
 import { twMerge } from "tailwind-merge";
 import { TPost } from "../../types";
 import { FaMessage, FaUserPen } from "react-icons/fa6";
-import { RiTimelineView } from "react-icons/ri";
 import CommentCard from "./CommentCard";
+import { FaDotCircle } from "react-icons/fa";
 
 const TimelineCard = ({ post }: { post: TPost; loading: boolean }) => {
   return (
     <li>
       <div className="timeline-middle">
-        <RiTimelineView />
+        <FaDotCircle />
       </div>
       <div
         className={twMerge(
-          "mb-10",
+          "mb-10 mx-5",
           post.id % 2 === 0
             ? "timeline-end md:text-start"
             : "timeline-start md:text-end"
         )}
       >
-        <div className="text-lg font-black">{post.title}</div>
+        <div className="text-xl font-bold">{post.title}</div>
         <p>{post.body}</p>
         <div
           className={twMerge(
@@ -49,7 +49,7 @@ const TimelineCard = ({ post }: { post: TPost; loading: boolean }) => {
           </div>
         </div>
       </div>
-      <hr />
+      <hr className="bg-base-300" />
     </li>
   );
 };
