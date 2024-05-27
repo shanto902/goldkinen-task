@@ -23,7 +23,7 @@ const TimelineCard = ({ post }: { post: TPost; loading: boolean }) => {
         <div
           className={twMerge(
             "flex items-center gap-2 font-mono italic",
-            post.id % 2 === 0 ? "flex-row" : "flex-row-reverse"
+            post.id % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
           )}
         >
           <FaUserPen /> {post.user.name}
@@ -31,12 +31,12 @@ const TimelineCard = ({ post }: { post: TPost; loading: boolean }) => {
         <p></p>
 
         <div className="collapse collapse-arrow">
-          <input type="radio" name="my-accordion-1" />
+          <input type="checkbox" name="my-accordion" />
           <div className="text-xl font-medium collapse-title">
             <div
               className={twMerge(
-                "flex items-center gap-2 text-sm",
-                post.id % 2 === 0 ? "flex-row" : "flex-row-reverse"
+                "flex items-center gap-2 text-sm mt-1",
+                post.id % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
               )}
             >
               <FaMessage /> Comments {post.comments.length}

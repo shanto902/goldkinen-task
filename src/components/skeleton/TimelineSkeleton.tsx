@@ -12,8 +12,8 @@ const TimelineSkeleton = ({ id }: { id: number }) => {
           className={twMerge(
             "min-w-full mt-3 mb-10 space-y-4 ",
             id % 2 === 0
-              ? "timeline-start md:text-end"
-              : "timeline-end md:text-start"
+              ? "timeline-end md:text-start"
+              : "timeline-start md:text-end"
           )}
         >
           <div className="w-full h-8 skeleton"></div>
