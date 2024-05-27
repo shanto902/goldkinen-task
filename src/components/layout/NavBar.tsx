@@ -16,12 +16,12 @@ const NavBar = ({
           <a className="text-xl btn btn-ghost">Timeline</a>
         </div>
         <div className="flex-none">
-          <ul className="z-20 px-1 menu menu-horizontal">
+          <ul className="z-20 px-1 menu menu-horizontal ">
             <li>
               {/* SORTING BASE ON ASCENDING AND DESCENDING  */}
               <details>
-                <summary>Sort By</summary>
-                <ul className="p-2 rounded-t-none bg-base-100">
+                <summary className="px-8 ">Sort By</summary>
+                <ul className="p-2 rounded-t-none bg-base-100 ">
                   <li onClick={() => setIsAscending(false)}>
                     <a>Descending</a>
                   </li>
