@@ -76,7 +76,6 @@ export const usePosts = (): UsePostsResult => {
 
     load();
   }, []);
-  console.log(posts);
 
   return { posts, loading, error };
 };

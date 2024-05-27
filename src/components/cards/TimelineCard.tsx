@@ -12,7 +12,7 @@ const TimelineCard = ({ post }: { post: TPost; loading: boolean }) => {
       </div>
       <div
         className={twMerge(
-          "mb-10 mx-5",
+          "mb-5 md:mx-5 space-y-2",
           post.id % 2 === 0
             ? "timeline-end md:text-start"
             : "timeline-start md:text-end"
@@ -32,7 +32,7 @@ const TimelineCard = ({ post }: { post: TPost; loading: boolean }) => {
 
         <div className="collapse collapse-arrow">
           <input type="checkbox" name="my-accordion" />
-          <div className="text-xl font-medium collapse-title">
+          <div className="-mt-2 text-xl font-medium collapse-title">
             <div
               className={twMerge(
                 "flex items-center gap-2 text-sm mt-1",

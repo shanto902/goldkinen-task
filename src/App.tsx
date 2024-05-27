@@ -7,12 +7,12 @@ import { TPost } from "./types";
 function App() {
   const { posts, loading, error } = usePosts();
   const [isAscending, setIsAscending] = useState<boolean>(false);
-  console.log(posts, loading, error);
+
   return (
     <>
       <SortContext.Provider value={isAscending}>
         <NavBar setIsAscending={setIsAscending} />
-        <Timeline posts={posts as TPost[]} loading={loading} />
+        <Timeline posts={posts as TPost[]} loading={loading} error={error} />
       </SortContext.Provider>
     </>
   );
